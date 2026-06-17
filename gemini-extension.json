@@ -1,0 +1,12 @@
+{
+  "name": "aethex",
+  "version": "0.0.1",
+  "description": "Aethex extension for voice agents, speech synthesis, transcription, knowledge bases, calls, and conversation analytics.",
+  "contextFileName": "AETHEX.md",
+  "mcpServers": {
+    "Aethex": {
+      "command": "uvx",
+      "args": ["aethexai-mcp"]
+    }
+  }
+}

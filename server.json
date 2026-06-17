@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "ai.aethex/aethexai-mcp",
+  "description": "MCP server that enables interaction with Aethex voice agents, speech synthesis, transcription, and conversation APIs",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/aethexai/aethexai-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "registry_base_url": "https://pypi.org",
+      "identifier": "aethexai-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environment_variables": [
+        {
+          "description": "Your Aethex API key",
+          "is_required": true,
+          "format": "string",
+          "is_secret": true,
+          "name": "AETHEX_API_KEY"
+        },
+        {
+          "description": "Optional API base URL override. Defaults to https://api.aethexai.com if not provided.",
+          "is_required": false,
+          "format": "string",
+          "is_secret": false,
+          "name": "AETHEX_BASE_URL"
+        },
+        {
+          "description": "The output mode for the MCP server. Defaults to 'files' if not provided.",
+          "is_required": false,
+          "format": "string",
+          "is_secret": false,
+          "name": "AETHEX_MCP_OUTPUT_MODE"
+        },
+        {
+          "description": "The base path for the MCP server. Defaults to $HOME/Desktop if not provided.",
+          "is_required": false,
+          "format": "string",
+          "is_secret": false,
+          "name": "AETHEX_MCP_BASE_PATH"
+        }
+      ]
+    }
+  ]
+}
